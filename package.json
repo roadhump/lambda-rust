@@ -1,0 +1,16 @@
+{
+  "name": "lambda-rust-real",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverless-plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "CC_x86_64_unknown_linux_musl=/usr/local/bin/x86_64-linux-musl-gcc OPENSSL_DIR=/usr/local/Cellar/openssl/1.0.2q cargo build --release && cp ./target/x86_64-unknown-linux-musl/release/lambda-rust-real ./bootstrap && zip lambda.zip ./bootstrap && rm ./bootstrap && sls deploy && rm lambda.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jszip": "^3.1.5"
+  }
+}

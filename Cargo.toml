@@ -1,0 +1,12 @@
+[package]
+name = "lambda-rust-real"
+version = "0.1.0"
+authors = ["Aliaksei Shytkin <e79eas@gmail.com>"]
+
+[dependencies]
+lambda_runtime = "0.1.0"
+serde_derive = "1.0.80"
+serde = "1.0.80"
+rusoto = "0.24.1"
+rusoto_dynamodb = "0.35.0"
+rusoto_core = "0.35.0"
